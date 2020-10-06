@@ -3,6 +3,13 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-new Vue({
+var vm = new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+$(document).ready(function(){
+  setInterval(function(){
+    console.log(vm.$refs.app); 
+    console.log(vm.$children[0].$children[0].forceRerender())
+  }, 3000);
+  });

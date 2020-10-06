@@ -4,6 +4,9 @@
     <div class="ui container">
       <investment-table></investment-table>
     </div>
+    <div id="example-1">
+      <button v-on:click="InvestmentTable.methods.forceRerender()">Add 1</button>
+    </div>
   </div>
 </template>
 
